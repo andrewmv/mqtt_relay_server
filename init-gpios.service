@@ -1,0 +1,14 @@
+[Unit]
+Description=GPIO Init
+DefaultDependencies=false
+
+[Service]
+User=pi
+Group=pi
+Type=oneshot
+ExecStart=/home/pi/Code/relay-control/init-gpios.py
+Restart=no
+
+[Install]
+WantedBy=sysinit.target
+
